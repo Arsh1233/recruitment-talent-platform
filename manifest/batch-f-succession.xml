@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Critical_Position__c</members>
+        <members>Readiness_Assessment__c</members>
+        <members>Succession_Nomination__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Actions_and_Related_Records</members>
+        <members>Populate_Active_Nomination_Key</members>
+        <members>Populate_Critical_Position_Department</members>
+        <name>Flow</name>
+    </types>
+    <version>67.0</version>
+</Package>

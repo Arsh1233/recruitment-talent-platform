@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Candidate_Skill__c</members>
+        <members>Education__c</members>
+        <members>Employment_Experience__c</members>
+        <members>Job_Application__c</members>
+        <members>Job_Opening__c</members>
+        <members>Job_Requisition__c</members>
+        <members>Job_Skill_Requirement__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Maintain_Active_Application_Key</members>
+        <members>Maintain_Candidate_Skill_Key</members>
+        <members>Maintain_Job_Skill_Requirement_Key</members>
+        <name>Flow</name>
+    </types>
+    <types>
+        <members>Employment_Type</members>
+        <members>Job_Level</members>
+        <members>Skill_Proficiency</members>
+        <members>Work_Mode</members>
+        <name>GlobalValueSet</name>
+    </types>
+    <version>67.0</version>
+</Package>

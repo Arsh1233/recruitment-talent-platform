@@ -44,6 +44,9 @@
         <filters>
             <field>Is_Superseded__c</field>
             <operator>EqualTo</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
         </filters>
         <getFirstRecordOnly>true</getFirstRecordOnly>
         <object>Readiness_Assessment__c</object>
@@ -51,27 +54,6 @@
         <sortOrder>Desc</sortOrder>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
-    <recordUpdates>
-        <name>Clear_Latest_Readiness</name>
-        <label>Clear Latest Readiness</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Id</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>$Record.Succession_Nomination__c</elementReference>
-            </value>
-        </filters>
-        <inputAssignments>
-            <field>Latest_Readiness__c</field>
-            <value>
-                <stringValue></stringValue>
-            </value>
-        </inputAssignments>
-        <object>Succession_Nomination__c</object>
-    </recordUpdates>
     <recordUpdates>
         <name>Update_Succession_Nomination</name>
         <label>Update Succession Nomination</label>

@@ -1,0 +1,10 @@
+Position_Code,Position_Name,Department_Code,Job_Level,Active,Critical_Role_Eligible
+SYN-SFDEV,Synthetic Salesforce Developer,SYN-ENG,Mid-Level,true,true
+SYN-SRSFDEV,Synthetic Senior Salesforce Developer,SYN-ENG,Senior,true,true
+SYN-QAENG,Synthetic Quality Engineer,SYN-ENG,Mid-Level,true,false
+SYN-DEVOPS,Synthetic DevOps Engineer,SYN-ENG,Mid-Level,true,true
+SYN-ENGMGR,Synthetic Engineering Manager,SYN-ENG,Manager,true,true
+SYN-PRODMGR,Synthetic Product Manager,SYN-PD,Manager,true,true
+SYN-BA,Synthetic Business Analyst,SYN-PD,Mid-Level,true,false
+SYN-REC,Synthetic Talent Recruiter,SYN-HR,Mid-Level,true,false
+SYN-HRBP,Synthetic HR Business Partner,SYN-HR,Senior,true,true

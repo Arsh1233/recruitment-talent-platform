@@ -1,0 +1,10 @@
+Record_Type,Synthetic_Key,Parent_Key,Status
+Job Requisition,SYN-REQ-SFDEV,SYN-ENG,Approved
+Job Requisition,SYN-REQ-QA,SYN-ENG,Approved
+Job Opening,Synthetic Salesforce Developer Opening,SYN-REQ-SFDEV,Published
+Job Opening,Synthetic Quality Engineer Opening,SYN-REQ-QA,Published
+Job Application,jordan.lee@example.invalid|Synthetic Salesforce Developer Opening,,Hired
+Job Application,casey.morgan@example.invalid|Synthetic Quality Engineer Opening,,Submitted
+Job Application,taylor.singh@example.invalid|Synthetic Salesforce Developer Opening,,Submitted
+Performance Cycle,Synthetic FY2027 Annual Review,,In Progress
+Critical Position,SYN-ENGMGR,SYN-ENG,Active

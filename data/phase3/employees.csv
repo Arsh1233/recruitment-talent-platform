@@ -1,0 +1,3 @@
+Employee_Number,Candidate_Email,Department_Code,Position_Code,Employment_Status
+SYN-EMP-001,,SYN-ENG,SYN-ENGMGR,Active
+SYN-EMP-002,jordan.lee@example.invalid,SYN-ENG,SYN-SFDEV,Active

@@ -1,0 +1,23 @@
+Skill_Code,Skill_Name,Category,Normalized_Name,Active,Technical_Skill
+SYN-APEX,Apex,Salesforce,apex,true,true
+SYN-LWC,Lightning Web Components,Salesforce,lightning web components,true,true
+SYN-FLOW,Salesforce Flow,Salesforce,salesforce flow,true,true
+SYN-SOQL,SOQL,Salesforce,soql,true,true
+SYN-EXPCLOUD,Experience Cloud,Salesforce,experience cloud,true,true
+SYN-SFSEC,Salesforce Security,Security,salesforce security,true,true
+SYN-JS,JavaScript,Programming Language,javascript,true,true
+SYN-JAVA,Java,Programming Language,java,true,true
+SYN-PYTHON,Python,Programming Language,python,true,true
+SYN-SQL,SQL,Database,sql,true,true
+SYN-GIT,Git,DevOps,git,true,true
+SYN-CICD,CI/CD,DevOps,ci/cd,true,true
+SYN-AZURE,Azure,Cloud,azure,true,true
+SYN-AWS,AWS,Cloud,aws,true,true
+SYN-AUTOTEST,Automated Testing,Testing,automated testing,true,true
+SYN-MANTEST,Manual Testing,Testing,manual testing,true,true
+SYN-BUSAN,Business Analysis,Business Analysis,business analysis,true,false
+SYN-REQMGT,Requirements Management,Business Analysis,requirements management,true,false
+SYN-PROJMGT,Project Management,Project Management,project management,true,false
+SYN-COMM,Communication,Communication,communication,true,false
+SYN-LEAD,Leadership,Leadership,leadership,true,false
+SYN-STAKE,Stakeholder Management,Communication,stakeholder management,true,false
