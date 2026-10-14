@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rating_Range</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+  Employee_Rating__c &lt; 1,
+  Employee_Rating__c &gt; 5,
+  Manager_Rating__c &lt; 1,
+  Manager_Rating__c &gt; 5
+)</errorConditionFormula>
+    <errorDisplayField>Employee_Rating__c</errorDisplayField>
+    <errorMessage>Ratings must be between 1 and 5</errorMessage>
+</ValidationRule>

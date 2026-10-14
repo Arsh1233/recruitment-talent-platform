@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Published_Opening_Required</fullName>
+    <active>true</active>
+    <description>Allows submission only for a published opening whose application deadline has not passed.</description>
+    <errorConditionFormula>AND(
+    ISPICKVAL(Status__c, &quot;Submitted&quot;),
+    OR(ISNEW(), ISCHANGED(Status__c), ISCHANGED(Job_Opening__c)),
+    OR(
+        NOT(ISPICKVAL(Job_Opening__r.Status__c, &quot;Published&quot;)),
+        NOT(Job_Opening__r.Is_Published__c),
+        AND(
+            NOT(ISBLANK(Job_Opening__r.Application_Deadline__c)),
+            Job_Opening__r.Application_Deadline__c &lt; TODAY()
+        )
+    )
+)</errorConditionFormula>
+    <errorMessage>Applications can be submitted only for a published job opening whose deadline has not passed.</errorMessage>
+</ValidationRule>

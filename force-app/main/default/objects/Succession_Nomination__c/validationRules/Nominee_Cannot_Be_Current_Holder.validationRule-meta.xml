@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Nominee_Cannot_Be_Current_Holder</fullName>
+    <active>true</active>
+    <description>Prevents nominating the current holder as successor for the same critical position.</description>
+    <errorConditionFormula>AND(
+    NOT(ISBLANK(Employee__c)),
+    NOT(ISBLANK(Critical_Position__c)),
+    Employee__c = Critical_Position__r.Current_Employee__c
+)</errorConditionFormula>
+    <errorMessage>The nominee cannot be the current holder of this critical position.</errorMessage>
+</ValidationRule>

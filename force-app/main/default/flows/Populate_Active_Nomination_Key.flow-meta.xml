@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>68.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Clear_Active_Nomination_Key</name>
+        <label>Clear Active Nomination Key</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Active_Nomination_Key__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Set_Active_Nomination_Key</name>
+        <label>Set Active Nomination Key</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Active_Nomination_Key__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>frmActiveNominationKey</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>Determine_Nomination_Key</name>
+        <label>Determine Nomination Key</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Set_Active_Nomination_Key</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Active Nomination</defaultConnectorLabel>
+        <rules>
+            <name>Terminal_Nomination</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Rejected</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Removed</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Clear_Active_Nomination_Key</targetReference>
+            </connector>
+            <label>Terminal Nomination</label>
+        </rules>
+    </decisions>
+    <description>Maintains a unique active nomination key and clears it for rejected or removed nominations.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>frmActiveNominationKey</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Critical_Position__c} &amp; &quot;-&quot; &amp; {!$Record.Employee__c}</expression>
+    </formulas>
+    <interviewLabel>Populate Active Nomination Key {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Maintain Active Succession Nomination Key</label>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Determine_Nomination_Key</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Critical_Position__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Employee__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Succession_Nomination__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Active_Skill_Required</fullName>
+    <active>true</active>
+    <description>Prevents a new or changed job skill requirement from using an inactive skill.</description>
+    <errorConditionFormula>AND(
+        NOT(ISBLANK(Skill__c)),
+        NOT(Skill__r.Is_Active__c),
+        OR(ISNEW(), ISCHANGED(Skill__c))
+    )</errorConditionFormula>
+    <errorDisplayField>Skill__c</errorDisplayField>
+    <errorMessage>Select an active skill for a new job requirement.</errorMessage>
+</ValidationRule>

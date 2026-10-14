@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Goals_Required_Before_Finalization</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+  OR(
+    ISPICKVAL(Status__c, &quot;Finalized&quot;),
+    ISPICKVAL(Status__c, &quot;Acknowledged&quot;)
+  ),
+  OR(
+    Total_Goals__c = 0,
+    Total_Goal_Weight__c &lt;&gt; 100
+  )
+)</errorConditionFormula>
+    <errorMessage>The review must have goals with a total active weight of exactly 100 before finalization</errorMessage>
+</ValidationRule>

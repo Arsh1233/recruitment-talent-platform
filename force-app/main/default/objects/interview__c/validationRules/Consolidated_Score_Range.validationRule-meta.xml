@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Consolidated_Score_Range</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    NOT(ISBLANK(Consolidated_Score__c)),
+    OR(
+        Consolidated_Score__c &lt; 0,
+        Consolidated_Score__c &gt; 5
+    )
+)</errorConditionFormula>
+    <errorDisplayField>Consolidated_Score__c</errorDisplayField>
+    <errorMessage>Consolidated Score must be between 0 and 5.</errorMessage>
+</ValidationRule>

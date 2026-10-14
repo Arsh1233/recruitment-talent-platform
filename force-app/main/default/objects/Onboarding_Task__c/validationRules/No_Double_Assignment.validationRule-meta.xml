@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Double_Assignment</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    NOT(ISBLANK(Assigned_User__c)),
+    NOT(ISBLANK(Assigned_Candidate__c))
+)</errorConditionFormula>
+    <errorDisplayField>Assigned_User__c</errorDisplayField>
+    <errorMessage>A task cannot be assigned to both a User and a Candidate</errorMessage>
+</ValidationRule>

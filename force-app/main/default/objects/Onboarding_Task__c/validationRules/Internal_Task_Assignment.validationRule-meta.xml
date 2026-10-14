@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Internal_Task_Assignment</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    NOT(ISPICKVAL(Task_Category__c, &quot;Candidate&quot;)),
+    NOT(ISPICKVAL(Status__c, &quot;Not Applicable&quot;)),
+    NOT(ISPICKVAL(Status__c, &quot;Cancelled&quot;)),
+    ISBLANK(Assigned_User__c)
+)</errorConditionFormula>
+    <errorDisplayField>Assigned_User__c</errorDisplayField>
+    <errorMessage>Internal tasks must have an Assigned User</errorMessage>
+</ValidationRule>

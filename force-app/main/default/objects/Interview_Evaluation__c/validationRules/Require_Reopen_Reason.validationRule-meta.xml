@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Reopen_Reason</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    Is_Reopened__c,
+    ISBLANK(Reopen_Reason__c)
+)</errorConditionFormula>
+    <errorMessage>Reopen Reason is required when an evaluation is reopened</errorMessage>
+</ValidationRule>

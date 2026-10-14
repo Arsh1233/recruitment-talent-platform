@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Consent_required_when_submitting</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ NOT(ISPICKVAL(Status__c, &quot;Draft&quot;)),
+ NOT(Is_Candidate_Consent_Confirmed__c)
+)</errorConditionFormula>
+    <errorMessage>Consent required when submitting</errorMessage>
+</ValidationRule>

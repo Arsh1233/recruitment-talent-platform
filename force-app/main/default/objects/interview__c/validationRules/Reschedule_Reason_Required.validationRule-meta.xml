@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reschedule_Reason_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    OR(
+        ISPICKVAL(Status__c, &quot;Reschedule Requested&quot;),
+        ISPICKVAL(Status__c, &quot;Rescheduled&quot;)
+    ),
+    ISBLANK(Reschedule_Reason__c)
+)</errorConditionFormula>
+    <errorDisplayField>Reschedule_Reason__c</errorDisplayField>
+    <errorMessage>Reschedule reason is required.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Candidate_Task_Assignment</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    ISPICKVAL(Task_Category__c, &quot;Candidate&quot;),
+    ISBLANK(Assigned_Candidate__c)
+)</errorConditionFormula>
+    <errorDisplayField>Assigned_Candidate__c</errorDisplayField>
+    <errorMessage>Candidate tasks must have an Assigned Candidate</errorMessage>
+</ValidationRule>

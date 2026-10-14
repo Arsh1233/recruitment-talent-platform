@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Score_Range</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+Skills_Score__c &lt; 0,
+Skills_Score__c &gt; 100,
+Experience_Score__c &lt; 0,
+Experience_Score__c &gt; 100,
+Performance_Score__c &lt; 0,
+Performance_Score__c &gt; 100,
+Certification_Score__c &lt; 0,
+Certification_Score__c &gt; 100,
+Development_Progress_Score__c &lt; 0,
+Development_Progress_Score__c &gt; 100
+)</errorConditionFormula>
+    <errorMessage>All readiness scores must be between 0 and 100.</errorMessage>
+</ValidationRule>

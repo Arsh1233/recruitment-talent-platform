@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Withdrawal_cannot_precede_grant</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    NOT(ISBLANK(Granted_At__c)),
+    NOT(ISBLANK(Withdrawn_At__c)),
+    Withdrawn_At__c &lt; Granted_At__c
+)</errorConditionFormula>
+    <errorMessage>Withdrawal cannot precede grant</errorMessage>
+</ValidationRule>

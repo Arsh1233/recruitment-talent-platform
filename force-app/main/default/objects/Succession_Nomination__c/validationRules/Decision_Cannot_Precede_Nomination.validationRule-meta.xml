@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Decision_Cannot_Precede_Nomination</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+NOT(ISBLANK(Nomination_Date__c)),
+NOT(ISBLANK(Decision_Date__c)),
+Decision_Date__c &lt; Nomination_Date__c
+)</errorConditionFormula>
+    <errorMessage>Decision Date cannot be earlier than Nomination Date</errorMessage>
+</ValidationRule>

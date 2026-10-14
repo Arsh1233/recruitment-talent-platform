@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Non_Expiring_Cannot_Have_Expiry</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+  Does_Not_Expire__c,
+  NOT(ISBLANK(Expiry_Date__c))
+)</errorConditionFormula>
+    <errorDisplayField>Expiry_Date__c</errorDisplayField>
+    <errorMessage>Expiry Date must be blank when Does Not Expire is selected</errorMessage>
+</ValidationRule>

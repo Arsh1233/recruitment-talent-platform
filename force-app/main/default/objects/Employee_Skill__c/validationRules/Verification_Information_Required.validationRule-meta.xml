@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Verification_Information_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    OR(
+        ISPICKVAL(Verification_Status__c, &quot;Manager Confirmed&quot;),
+        ISPICKVAL(Verification_Status__c, &quot;HR Confirmed&quot;)
+    ),
+    OR(
+        ISBLANK(Verified_By__c),
+        ISBLANK(Verified_At__c)
+    )
+)</errorConditionFormula>
+    <errorMessage>Verified By and Verified At are required when the skill is manager or HR confirmed</errorMessage>
+</ValidationRule>

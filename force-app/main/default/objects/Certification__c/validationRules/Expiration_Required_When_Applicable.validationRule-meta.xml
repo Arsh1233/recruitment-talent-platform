@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Expiration_Required_When_Applicable</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+  NOT(Does_Not_Expire__c),
+  ISPICKVAL(Status__c, &quot;Active&quot;),
+  ISBLANK(Expiry_Date__c)
+)</errorConditionFormula>
+    <errorDisplayField>Expiry_Date__c</errorDisplayField>
+    <errorMessage>Expiry Date is required for Active certifications</errorMessage>
+</ValidationRule>

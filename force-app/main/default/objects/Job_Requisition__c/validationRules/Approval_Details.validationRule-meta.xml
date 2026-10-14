@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approval_Details</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ OR(
+   ISPICKVAL(Status__c, &quot;Approved&quot;),
+   ISPICKVAL(Status__c, &quot;Converted&quot;)
+ ),
+ OR(
+   ISBLANK(Approved_By__c),
+   ISBLANK(Approved_At__c)
+ )
+)</errorConditionFormula>
+    <errorMessage>This means an Approved/Converted requisition must have:
+
+Approved By
+Approved At</errorMessage>
+</ValidationRule>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Completed_time_required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(    OR(            ISPICKVAL(Status__c, &quot;Completed&quot;),        ISPICKVAL(Status__c, &quot;Failed&quot;),        ISPICKVAL(Status__c, &quot;Needs Verification&quot;),        ISPICKVAL(Status__c, &quot;Verified&quot;)),    ISBLANK(Completed_At__c) )</errorConditionFormula>
+    <errorMessage>Completed time required</errorMessage>
+</ValidationRule>

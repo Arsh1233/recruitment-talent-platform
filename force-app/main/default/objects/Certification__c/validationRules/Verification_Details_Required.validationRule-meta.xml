@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Verification_Details_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+  Is_Verified__c,
+  OR(
+    ISBLANK(Verified_By__c),
+    ISBLANK(Verification_At__c)
+  )
+)</errorConditionFormula>
+    <errorDisplayField>Is_Verified__c</errorDisplayField>
+    <errorMessage>Verified By and Verification At are required when certification is verified</errorMessage>
+</ValidationRule>

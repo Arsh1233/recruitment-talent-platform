@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Scheduled_Start_Not_In_Past</fullName>
+    <active>true</active>
+    <description>Prevents initially scheduling or rescheduling an interview in the past.</description>
+    <errorConditionFormula>AND(
+    OR(ISNEW(), ISCHANGED(Scheduled_Start__c)),
+    NOT(ISBLANK(Scheduled_Start__c)),
+    Scheduled_Start__c &lt; NOW()
+)</errorConditionFormula>
+    <errorMessage>Scheduled Start cannot be in the past.</errorMessage>
+</ValidationRule>

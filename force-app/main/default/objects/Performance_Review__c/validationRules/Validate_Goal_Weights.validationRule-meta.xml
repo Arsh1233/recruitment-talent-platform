@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_Goal_Weights</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+  OR(
+    ISPICKVAL(Status__c, &quot;Finalized&quot;),
+    ISPICKVAL(Status__c, &quot;Acknowledged&quot;)
+  ),
+  ABS(Total_Goal_Weight__c - 100) &gt; 0.01
+)</errorConditionFormula>
+    <errorMessage>Active goal weights must total exactly 100 before finalizing the review</errorMessage>
+</ValidationRule>

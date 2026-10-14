@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Self_Assessment_Deadline_Order</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+  NOT(ISBLANK(Self_Assessment_Deadline__c)),
+  OR(
+    Self_Assessment_Deadline__c &lt; Start_Date__c,
+    Self_Assessment_Deadline__c &gt; End_Date__c,
+    AND(
+      NOT(ISBLANK(Goal_Setting_Deadline__c)),
+      Self_Assessment_Deadline__c &lt; Goal_Setting_Deadline__c
+    )
+  )
+)</errorConditionFormula>
+    <errorDisplayField>Self_Assessment_Deadline__c</errorDisplayField>
+    <errorMessage>Self-Assessment Deadline must be within the cycle and after Goal Setting Deadline</errorMessage>
+</ValidationRule>

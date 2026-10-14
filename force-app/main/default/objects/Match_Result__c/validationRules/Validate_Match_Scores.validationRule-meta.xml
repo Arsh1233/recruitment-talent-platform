@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_Match_Scores</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(    Overall_Score__c &lt; 0,    Overall_Score__c &gt; 100,    Mandatory_Skills_Score__c &lt; 0,    Mandatory_Skills_Score__c &gt; 100,    Optional_Skills_Score__c &lt; 0,    Optional_Skills_Score__c &gt; 100,    Experience_Score__c &lt; 0,    Experience_Score__c &gt; 100,    Education_Score__c &lt; 0,    Education_Score__c &gt; 100,    Certification_Score__c &lt; 0,    Certification_Score__c &gt; 100,    Interview_Score__c &lt; 0,    Interview_Score__c &gt; 100
+)</errorConditionFormula>
+    <errorMessage>Validate Match Scores</errorMessage>
+</ValidationRule>

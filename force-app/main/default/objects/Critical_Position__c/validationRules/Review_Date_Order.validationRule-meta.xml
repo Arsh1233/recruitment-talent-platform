@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Review_Date_Order</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+NOT(ISBLANK(Last_Reviewed_Date__c)),
+NOT(ISBLANK(Next_Review_Date__c)),
+Next_Review_Date__c &lt;= Last_Reviewed_Date__c
+)</errorConditionFormula>
+    <errorMessage>Next Review Date must be later than Last Reviewed Date.</errorMessage>
+</ValidationRule>

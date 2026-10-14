@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Withdrawal_requires_a_grant</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    NOT(ISBLANK(Withdrawn_At__c)),
+    OR(
+        NOT(Is_Granted__c),
+        ISBLANK(Granted_At__c)
+    )
+)</errorConditionFormula>
+    <errorMessage>Withdrawal requires a grant</errorMessage>
+</ValidationRule>

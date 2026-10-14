@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Development_Required_Consistency</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+OR(
+ISPICKVAL(
+Recommended_Readiness__c,
+&quot;Development Required&quot;
+),
+ISPICKVAL(
+Approved_Readiness__c,
+&quot;Development Required&quot;
+)
+),
+NOT(Is_Development_Required__c)
+)</errorConditionFormula>
+    <errorMessage>Development Required must be checked when Recommended or Approved Readiness is Development Required</errorMessage>
+</ValidationRule>

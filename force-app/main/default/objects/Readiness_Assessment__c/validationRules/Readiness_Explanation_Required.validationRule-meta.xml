@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Readiness_Explanation_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    NOT(ISPICKVAL(Recommended_Readiness__c, &quot;&quot;)),
+    ISBLANK(Explanation__c)
+)</errorConditionFormula>
+    <errorMessage>Explanation is required when Recommended Readiness is provided</errorMessage>
+</ValidationRule>

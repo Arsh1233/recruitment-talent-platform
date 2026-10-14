@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Valid_Round_Number</fullName>
+    <active>true</active>
+    <errorConditionFormula>Round_Number__c &lt;=0</errorConditionFormula>
+    <errorDisplayField>Round_Number__c</errorDisplayField>
+    <errorMessage>Round Number must be greater than zero</errorMessage>
+</ValidationRule>

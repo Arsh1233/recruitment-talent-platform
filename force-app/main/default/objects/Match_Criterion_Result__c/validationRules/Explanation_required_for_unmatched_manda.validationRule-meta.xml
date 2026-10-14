@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Explanation_required_for_unmatched_manda</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    Is_Mandatory__c,
+    NOT(Is_Matched__c),
+    ISBLANK(Explanation__c)
+)</errorConditionFormula>
+    <errorMessage>error</errorMessage>
+</ValidationRule>

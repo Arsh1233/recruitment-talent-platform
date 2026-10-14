@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>68.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Set_Requirement_Key</name>
+        <label>Set Requirement Key</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Composite_Key__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>frmRequirementKey</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <description>Maintains the unique Job Opening, Skill, and Requirements Version key.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>frmRequirementKey</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Job_Opening__c} &amp; &quot;-&quot; &amp; {!$Record.Skill__c} &amp; &quot;-&quot; &amp; TEXT({!$Record.Requirement_Version__c})</expression>
+    </formulas>
+    <interviewLabel>Maintain Job Skill Requirement Key {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Maintain Job Skill Requirement Key</label>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Set_Requirement_Key</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Job_Opening__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Skill__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Requirement_Version__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Job_Skill_Requirement__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

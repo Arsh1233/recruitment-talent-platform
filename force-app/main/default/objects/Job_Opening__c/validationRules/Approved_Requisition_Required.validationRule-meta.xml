@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approved_Requisition_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ ISNEW(),
+ NOT(
+  OR(
+   ISPICKVAL(Requisition__r.Status__c, &quot;Approved&quot;),
+   ISPICKVAL(Requisition__r.Status__c, &quot;Converted&quot;)
+  )
+ )
+)</errorConditionFormula>
+    <errorMessage>A Job Opening can only be created from an approved requisition.</errorMessage>
+</ValidationRule>

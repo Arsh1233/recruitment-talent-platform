@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_Content_Version_ID</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(    NOT(ISBLANK(Content_Version_ID__c)),    NOT(        REGEX(            Content_Version_ID__c,            &quot;^[a-zA-Z0-9]{18}$&quot;        )    ) )</errorConditionFormula>
+    <errorMessage>Content Version ID must be an 18-character Salesforce ID.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Match_score_range</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+ Current_Match_Score__c &lt; 0,
+ Current_Match_Score__c &gt; 100
+)</errorConditionFormula>
+    <errorMessage>Match score range</errorMessage>
+</ValidationRule>

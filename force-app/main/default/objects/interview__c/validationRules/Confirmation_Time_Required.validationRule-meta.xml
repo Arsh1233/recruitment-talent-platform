@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Confirmation_Time_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    Is_Candidate_Confirmed__c,
+    ISBLANK(Confirmation_At__c)
+)</errorConditionFormula>
+    <errorDisplayField>Confirmation_At__c</errorDisplayField>
+    <errorMessage>Confirmation time is required when the candidate is confirmed.</errorMessage>
+</ValidationRule>

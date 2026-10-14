@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Skill_Code_Changes</fullName>
+    <active>true</active>
+    <description>- Prevents an existing Skill Code from being changed unless the user has the Edit Skill Code custom permission.</description>
+    <errorConditionFormula>AND(
+    NOT(ISNEW()),
+    ISCHANGED(Skill_code__c),
+    NOT($Permission.Edit_Skill_Code)
+)</errorConditionFormula>
+    <errorMessage>Skill Code is a stable integration identifier and cannot be changed. Contact a Skill Catalogue administrator if a correction is required.</errorMessage>
+</ValidationRule>

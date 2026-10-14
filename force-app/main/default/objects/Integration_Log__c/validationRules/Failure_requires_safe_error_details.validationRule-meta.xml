@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Failure_requires_safe_error_details</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    ISPICKVAL(Status__c, &quot;Failed&quot;), 
+    OR(
+        ISBLANK(TEXT(Error_Category__c)), 
+        ISBLANK(Safe_Error_Message__c)
+    )
+)</errorConditionFormula>
+    <errorMessage>Provider returned HTTP 429. Request can be retried.</errorMessage>
+</ValidationRule>

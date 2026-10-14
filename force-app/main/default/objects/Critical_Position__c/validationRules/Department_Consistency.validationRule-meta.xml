@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Department_Consistency</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+NOT(ISBLANK(Department__c)),
+NOT(ISBLANK(Position__c)),
+Department__c &lt;&gt; Position__r.Department__c
+)</errorConditionFormula>
+    <errorMessage>The selected Department must match the Position&apos;s Department.</errorMessage>
+</ValidationRule>

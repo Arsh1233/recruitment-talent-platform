@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Scheduled_Information_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    OR(
+        ISPICKVAL(Status__c, &quot;Scheduled&quot;),
+        ISPICKVAL(Status__c, &quot;Candidate Confirmed&quot;),
+        ISPICKVAL(Status__c, &quot;Rescheduled&quot;)
+    ),
+    OR(
+        ISBLANK(Scheduled_Start__c),
+        ISBLANK(Scheduled_End__c),
+        ISPICKVAL(Interview_Mode__c, &quot;&quot;)
+    )
+)</errorConditionFormula>
+    <errorMessage>Scheduled Start, Scheduled End, and Interview Mode are required for scheduled interviews.</errorMessage>
+</ValidationRule>

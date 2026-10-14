@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Application_Deadline</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ NOT(ISBLANK(Publication_Date__c)),
+ NOT(ISBLANK(Application_Deadline__c)),
+ Application_Deadline__c &lt; Publication_Date__c
+)</errorConditionFormula>
+    <errorMessage>Application Deadline cannot be before Publication Date.</errorMessage>
+</ValidationRule>

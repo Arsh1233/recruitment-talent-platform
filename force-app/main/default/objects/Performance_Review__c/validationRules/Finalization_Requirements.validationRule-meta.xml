@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Finalization_Requirements</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+  OR(
+    ISPICKVAL(Status__c, &quot;Finalized&quot;),
+    ISPICKVAL(Status__c, &quot;Acknowledged&quot;)
+  ),
+  OR(
+    ISBLANK(Final_Rating__c),
+    ISBLANK(Finalized_Date__c)
+  )
+)</errorConditionFormula>
+    <errorMessage>Final Rating and Finalized Date are required</errorMessage>
+</ValidationRule>

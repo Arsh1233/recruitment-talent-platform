@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Scheduled_End_Must_Follow_Start</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    NOT(ISBLANK(Scheduled_Start__c)),
+    NOT(ISBLANK(Scheduled_End__c)),
+    Scheduled_End__c &lt;= Scheduled_Start__c
+)</errorConditionFormula>
+    <errorDisplayField>Scheduled_End__c</errorDisplayField>
+    <errorMessage>Scheduled End must be after Scheduled Start.</errorMessage>
+</ValidationRule>

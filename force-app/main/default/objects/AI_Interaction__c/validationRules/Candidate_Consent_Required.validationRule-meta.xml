@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Candidate_Consent_Required</fullName>
+    <active>true</active>
+    <description>Prevents candidate-related AI interactions without candidate consent.</description>
+    <errorConditionFormula>AND(
+    OR(ISNEW(), ISCHANGED(Candidate__c), ISCHANGED(Status__c)),
+    NOT(ISBLANK(Candidate__c)),
+    NOT(Candidate__r.Is_Consent_Available__c),
+    NOT(ISPICKVAL(Status__c, &quot;Cancelled&quot;))
+)</errorConditionFormula>
+    <errorMessage>Candidate consent is required before candidate-related AI processing.</errorMessage>
+</ValidationRule>

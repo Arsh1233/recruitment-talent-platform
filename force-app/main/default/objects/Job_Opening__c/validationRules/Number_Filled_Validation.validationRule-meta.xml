@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_Filled_Validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+  Number_of_Openings__c &lt;= 0,
+  Number_Filled__c &lt; 0,
+  Number_Filled__c &gt; Number_of_Openings__c
+)</errorConditionFormula>
+    <errorMessage>Number Filled must be between zero and Number of Openings</errorMessage>
+</ValidationRule>

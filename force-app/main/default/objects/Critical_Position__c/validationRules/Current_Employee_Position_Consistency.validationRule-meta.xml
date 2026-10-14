@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_Employee_Position_Consistency</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+NOT(ISBLANK(Current_Employee__c)),
+NOT(ISBLANK(Position__c)),
+Current_Employee__r.Position__c &lt;&gt; Position__c
+)</errorConditionFormula>
+    <errorMessage>The current employee must hold the selected position</errorMessage>
+</ValidationRule>

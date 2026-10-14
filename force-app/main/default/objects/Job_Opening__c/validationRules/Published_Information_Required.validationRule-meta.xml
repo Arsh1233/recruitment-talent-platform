@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Published_Information_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ OR(
+  Is_Published__c,
+  ISPICKVAL(Status__c, &quot;Published&quot;)
+ ),
+ OR(
+  ISBLANK(Public_Job_Title__c),
+  ISBLANK(Public_Description__c),
+  ISBLANK(Publication_Date__c),
+  ISBLANK(Application_Deadline__c)
+ )
+)</errorConditionFormula>
+    <errorMessage>Please complete the Public Job Title, Public Description, Publication Date, and Application Deadline before publishing the job.</errorMessage>
+</ValidationRule>

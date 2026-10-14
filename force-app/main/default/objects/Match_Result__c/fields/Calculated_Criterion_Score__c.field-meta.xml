@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Calculated_Criterion_Score__c</fullName>
+    <label>Calculated Criterion Score</label>
+    <securityClassification>Confidential</securityClassification>
+    <summarizedField>Match_Criterion_Result__c.Weighted_Contribution__c</summarizedField>
+    <summaryForeignKey>Match_Criterion_Result__c.Match_Result__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

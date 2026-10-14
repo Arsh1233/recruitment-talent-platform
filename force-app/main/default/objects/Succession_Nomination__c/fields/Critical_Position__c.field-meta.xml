@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Critical_Position__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <label>Critical Position</label>
+    <referenceTo>Critical_Position__c</referenceTo>
+    <relationshipLabel>Succession Nominations</relationshipLabel>
+    <relationshipName>Succession_Nominations</relationshipName>
+    <required>true</required>
+    <securityClassification>Restricted</securityClassification>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

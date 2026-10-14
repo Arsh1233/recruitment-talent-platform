@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Valid_Response_Date</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    NOT(ISBLANK(Response_Date__c)),
+    NOT(ISBLANK(Sent_Date__c)),
+    Response_Date__c &lt; Sent_Date__c
+)</errorConditionFormula>
+    <errorDisplayField>Response_Date__c</errorDisplayField>
+    <errorMessage>Response Date cannot be before Sent Date</errorMessage>
+</ValidationRule>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>68.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Set_Normalized_Values</name>
+        <label>Set Normalized Values</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Normalized_Email__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>frmNormalizedEmail</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Normalized_Phone__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>frmNormalizedPhone</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <description>Normalizes candidate email and phone values for duplicate detection.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>frmNormalizedEmail</name>
+        <dataType>String</dataType>
+        <expression>LOWER(TRIM({!$Record.Email__c}))</expression>
+    </formulas>
+    <formulas>
+        <name>frmNormalizedPhone</name>
+        <dataType>String</dataType>
+        <expression>SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(TRIM({!$Record.Phone__c}), &quot; &quot;, &quot;&quot;), &quot;-&quot;, &quot;&quot;), &quot;(&quot;, &quot;&quot;), &quot;)&quot;, &quot;&quot;), &quot;+&quot;, &quot;&quot;), &quot;.&quot;, &quot;&quot;)</expression>
+    </formulas>
+    <interviewLabel>Normalize Candidate Contact Details {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Normalize Candidate Contact Details</label>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Set_Normalized_Values</targetReference>
+        </connector>
+        <object>Candidate__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>
