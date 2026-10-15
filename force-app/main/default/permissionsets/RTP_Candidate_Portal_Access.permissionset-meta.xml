@@ -53,7 +53,6 @@
     <fieldPermissions><editable>false</editable><field>Certification__c.Is_Verified__c</field><readable>true</readable></fieldPermissions>
     <fieldPermissions><editable>false</editable><field>Certification__c.Status__c</field><readable>true</readable></fieldPermissions>
     <fieldPermissions><editable>false</editable><field>Job_Opening__c.Application_Deadline__c</field><readable>true</readable></fieldPermissions>
-    <fieldPermissions><editable>false</editable><field>Job_Opening__c.Is_Portal_Visible__c</field><readable>true</readable></fieldPermissions>
     <fieldPermissions><editable>false</editable><field>Job_Opening__c.Location__c</field><readable>true</readable></fieldPermissions>
     <fieldPermissions><editable>false</editable><field>Job_Opening__c.Public_Description__c</field><readable>true</readable></fieldPermissions>
     <fieldPermissions><editable>false</editable><field>Job_Opening__c.Public_Job_Title__c</field><readable>true</readable></fieldPermissions>

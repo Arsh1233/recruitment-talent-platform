@@ -230,6 +230,27 @@ private class RTPStep9PortalSecurityTest {
     }
 
     @IsTest
+    static void returnsControlledJobListingError() {
+        User candidateAUser = [
+            SELECT Id FROM User WHERE LastName = 'Portal Candidate A' LIMIT 1
+        ];
+        System.runAs(candidateAUser) {
+            RTPPortalJobController.forceControlledError = true;
+            Boolean controlled = false;
+            try {
+                RTPPortalJobController.getPublishedJobs();
+            } catch (AuraHandledException expected) {
+                controlled = true;
+                System.assertEquals(
+                    'Published jobs are temporarily unavailable.',
+                    expected.getMessage()
+                );
+            }
+            System.assert(controlled, 'Job listing failures must return a controlled error.');
+        }
+    }
+
+    @IsTest
     static void returnsControlledErrorWithoutCandidateIdentity() {
         User candidateBUser = [
             SELECT Id FROM User WHERE LastName = 'Portal Candidate B' LIMIT 1

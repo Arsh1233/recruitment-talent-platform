@@ -7,7 +7,8 @@ private class RTPRecordSharingServiceTest {
         List<User> users = new List<User>();
         for (String roleName : new List<String>{
             'Recruiter One', 'Recruiter Two', 'Manager One', 'Manager Two',
-            'Interviewer One', 'Interviewer Two', 'Employee User'
+            'Interviewer One', 'Interviewer Two', 'Unauthorized Interviewer',
+            'Employee User'
         }) {
             String token = roleName.replace(' ', '').toLowerCase();
             users.add(new User(
@@ -50,7 +51,8 @@ private class RTPRecordSharingServiceTest {
             FROM User
             WHERE LastName IN (
                 'Recruiter One', 'Recruiter Two', 'Manager One', 'Manager Two',
-                'Interviewer One', 'Interviewer Two', 'Employee User'
+                'Interviewer One', 'Interviewer Two', 'Unauthorized Interviewer',
+                'Employee User'
             )
         ]) {
             usersByName.put(userRecord.LastName, userRecord);
@@ -159,6 +161,18 @@ private class RTPRecordSharingServiceTest {
                 accessDenied = true;
             }
             System.assert(accessDenied, 'A different interviewer must not edit the evaluation.');
+        }
+        System.runAs(usersByName.get('Unauthorized Interviewer')) {
+            Boolean permissionDenied = false;
+            try {
+                RTPInterviewEvaluationService.getMyEvaluation(interviewRecord.Id);
+            } catch (AuraHandledException expected) {
+                permissionDenied = true;
+            }
+            System.assert(
+                permissionDenied,
+                'A user without the submission permission must not use the evaluation gateway.'
+            );
         }
 
         Offer__c offerRecord = new Offer__c(
