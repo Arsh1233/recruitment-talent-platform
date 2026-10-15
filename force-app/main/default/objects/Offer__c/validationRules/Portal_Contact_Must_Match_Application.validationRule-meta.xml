@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Portal_Contact_Must_Match_Application</fullName>
+    <active>true</active>
+    <description>Requires the system-managed portal identity to equal the related Application's portal identity.</description>
+    <errorConditionFormula>OR(
+    ISBLANK(Portal_Contact__c),
+    Portal_Contact__c &lt;&gt; Application__r.Portal_Contact__c
+)</errorConditionFormula>
+    <errorDisplayField>Portal_Contact__c</errorDisplayField>
+    <errorMessage>Portal Contact must match the related application identity.</errorMessage>
+</ValidationRule>

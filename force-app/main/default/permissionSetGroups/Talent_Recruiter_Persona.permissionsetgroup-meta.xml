@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Persona container for recruiters managing candidate and recruitment processes without employee-performance or succession access.</description>
+    <label>Talent Recruiter Persona</label>
+</PermissionSetGroup>

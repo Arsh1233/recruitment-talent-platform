@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Persona container for HR administrators. Succession access remains a separate restricted assignment.</description>
+    <label>Talent HR Administrator</label>
+    <permissionSets>RTP_HR_Admin_Access</permissionSets>
+</PermissionSetGroup>

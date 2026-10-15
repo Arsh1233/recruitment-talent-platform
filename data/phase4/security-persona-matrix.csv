@@ -1,0 +1,10 @@
+Persona,User_Type,License_Strategy,Permission_Container,Record_Scope,Sensitive_Access,Explicit_Exclusions
+System Administrator,Internal,Salesforce,System Administrator profile,All records,Full system administration,Normal recruitment and HR testing
+HR Administrator,Internal,Salesforce or Salesforce Platform,RTP_HR_Talent_Team,HR and recruitment records,Salary and performance where required,Setup administration and succession unless separately authorized
+Recruiter,Internal,Salesforce or Salesforce Platform,RTP_Recruitment_Team,Assigned or shared recruitment records,Recruiter-confidential data,Performance reviews and succession
+Hiring Manager,Internal,Salesforce or Salesforce Platform,Talent_Hiring_Manager,Assigned requisitions openings and related applications,Limited candidate summaries,Parsing changes unrelated applications succession and offered compensation edits
+Interviewer,Internal,Salesforce or Salesforce Platform,Talent_Interviewer_Persona,Assigned interviews and own evaluations,Limited candidate summary,Offers other evaluations personal identifiers and application status changes
+Employee,Internal,Salesforce Platform where supported,Talent_Employee,Own employee-related records,Released review and development data,Succession nominations
+Talent Manager / Succession Committee,Internal,Salesforce or Salesforce Platform,Talent_Succession_Committee,Authorized succession population,Succession and readiness data,Unrelated candidate and recruitment data
+Candidate Portal User,External,Customer Community,RTP_Candidate_User,Own candidate graph and published jobs,Own contact and offer-response data,Other candidates internal evaluations matching explanations employee succession integration and AI audit data
+Integration User,Non-human,Salesforce Integration,RTP_AI_Service_User,Records required by approved integration operations,Parsing matching and safe integration logs,Modify All Data setup salary performance and succession

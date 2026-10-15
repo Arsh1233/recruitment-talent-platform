@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Employee self-service foundation for the user's own profile, skills, released reviews, goals, and development records.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>RTP Employee Self Service</label>
+</PermissionSet>

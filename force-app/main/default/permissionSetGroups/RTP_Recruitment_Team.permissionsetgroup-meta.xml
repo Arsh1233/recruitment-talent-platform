@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Recruiter persona group. Succession access is intentionally excluded.</description>
+    <label>RTP Recruitment Team</label>
+    <permissionSets>RTP_Recruiter_Access</permissionSets>
+</PermissionSetGroup>

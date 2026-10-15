@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Least-privilege foundation for approved Talent AI API, Apex, credential, parsing, matching, and safe logging operations.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>RTP AI Integration Access</label>
+    <license>Salesforce Integration</license>
+</PermissionSet>

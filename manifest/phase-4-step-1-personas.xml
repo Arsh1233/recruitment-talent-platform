@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Talent_HR_Administrator</members>
+        <members>Talent_Recruiter_Persona</members>
+        <members>Talent_Hiring_Manager</members>
+        <members>Talent_Interviewer_Persona</members>
+        <members>Talent_Employee</members>
+        <members>Talent_Succession_Committee</members>
+        <name>PermissionSetGroup</name>
+    </types>
+    <types>
+        <members>Talent_Candidate_Portal</members>
+        <members>Talent_AI_Integration</members>
+        <name>PermissionSet</name>
+    </types>
+    <version>67.0</version>
+</Package>

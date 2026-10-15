@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>General HR and talent administration. Confidential succession access is intentionally assigned through a separate group.</description>
+    <label>RTP HR Talent Team</label>
+    <permissionSets>RTP_HR_Admin_Access</permissionSets>
+</PermissionSetGroup>

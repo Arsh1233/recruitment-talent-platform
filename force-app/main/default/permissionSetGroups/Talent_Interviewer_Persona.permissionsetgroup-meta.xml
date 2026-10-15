@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Persona container for interviewers with assigned-interview and own-evaluation access only.</description>
+    <label>Talent Interviewer Persona</label>
+    <permissionSets>RTP_Interviewer_Access</permissionSets>
+</PermissionSetGroup>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Certification__c.Portal_Contact__c</members>
+        <members>interview__c.Portal_Contact__c</members>
+        <members>Job_Application__c.Portal_Contact__c</members>
+        <members>Offer__c.Portal_Contact__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>RTP_Set_Application_Portal_Contact</members>
+        <members>RTP_Set_Certification_Portal_Contact</members>
+        <members>RTP_Set_Interview_Portal_Contact</members>
+        <members>RTP_Set_Offer_Portal_Contact</members>
+        <name>Flow</name>
+    </types>
+    <types>
+        <members>RTP_Portal_Contact_Admin</members>
+        <name>PermissionSet</name>
+    </types>
+    <types>
+        <members>Certification__c.Portal_Contact_Must_Match_Candidate</members>
+        <members>interview__c.Portal_Contact_Must_Match_Application</members>
+        <members>Job_Application__c.Portal_Contact_Must_Match_Candidate</members>
+        <members>Offer__c.Portal_Contact_Must_Match_Application</members>
+        <name>ValidationRule</name>
+    </types>
+    <version>67.0</version>
+</Package>

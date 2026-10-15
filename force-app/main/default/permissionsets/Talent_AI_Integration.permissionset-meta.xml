@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>License-scoped least-privilege foundation for the Talent AI integration user. Modify All Data and setup administration are intentionally excluded.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Talent AI Integration</label>
+    <license>Salesforce Integration</license>
+</PermissionSet>

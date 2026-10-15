@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Read-only foundation for authorized audit and integration-monitoring information. No credential or sensitive payload access.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>RTP Audit Read Access</label>
+</PermissionSet>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Salesforce Integration service persona group for approved Talent AI operations only.</description>
+    <label>RTP AI Service User</label>
+    <permissionSets>RTP_AI_Integration_Access</permissionSets>
+</PermissionSetGroup>

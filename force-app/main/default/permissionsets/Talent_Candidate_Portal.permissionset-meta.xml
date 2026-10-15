@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>License-scoped foundation for Recruitment and Talent Portal candidate users. Functional permissions are added in later Phase 4 steps.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Talent Candidate Portal</label>
+    <license>Customer Community</license>
+</PermissionSet>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>RTP_Recruiter_Access</members>
+        <members>RTP_Hiring_Manager_Access</members>
+        <members>RTP_Interviewer_Access</members>
+        <members>RTP_HR_Admin_Access</members>
+        <members>RTP_Employee_Self_Service</members>
+        <members>RTP_Succession_Access</members>
+        <members>RTP_Candidate_Portal_Access</members>
+        <members>RTP_AI_Integration_Access</members>
+        <members>RTP_Audit_Read_Access</members>
+        <name>PermissionSet</name>
+    </types>
+    <types>
+        <members>RTP_Recruitment_Team</members>
+        <members>RTP_HR_Talent_Team</members>
+        <members>RTP_Candidate_User</members>
+        <members>RTP_AI_Service_User</members>
+        <members>Talent_Hiring_Manager</members>
+        <members>Talent_Interviewer_Persona</members>
+        <members>Talent_Employee</members>
+        <members>Talent_HR_Administrator</members>
+        <members>Talent_Succession_Committee</members>
+        <name>PermissionSetGroup</name>
+    </types>
+    <version>67.0</version>
+</Package>

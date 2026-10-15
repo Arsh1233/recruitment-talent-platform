@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Access foundation for assigned requisitions, openings, applications, and hiring decisions.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>RTP Hiring Manager Access</label>
+</PermissionSet>

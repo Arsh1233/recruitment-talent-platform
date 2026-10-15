@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Persona container for employee self-service access to the employee profile, released reviews, goals, skills, and development records.</description>
+    <label>Talent Employee</label>
+    <permissionSets>RTP_Employee_Self_Service</permissionSets>
+</PermissionSetGroup>

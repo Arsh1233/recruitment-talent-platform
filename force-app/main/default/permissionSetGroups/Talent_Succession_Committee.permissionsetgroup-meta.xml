@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Highly restricted persona container for talent managers and authorized succession committee members.</description>
+    <label>Talent Succession Committee</label>
+    <permissionSets>RTP_Succession_Access</permissionSets>
+</PermissionSetGroup>
