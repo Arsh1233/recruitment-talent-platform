@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
-    <description>Recruitment operations without employee-performance or succession access. Functional permissions are added in later Phase 4 steps.</description>
+    <description>Recruitment operations with controlled candidate PII, compensation, resume-processing, interview, and offer fields. No employee-performance or succession access.</description>
+    <fieldPermissions><editable>true</editable><field>Candidate__c.Email__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>true</editable><field>Candidate__c.Phone__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Candidate__c.Contact__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Candidate__c.Is_Consent_Available__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>true</editable><field>Candidate__c.Is_Resume_Verified__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>true</editable><field>Resume_Parsing_Request__c.Content_Version_ID__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>true</editable><field>Resume_Parsing_Request__c.Original_File_Name__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>true</editable><field>Resume_Parsing_Request__c.Status__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Resume_Parsing_Request__c.Confidence_Summary__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Resume_Parsing_Request__c.Safe_Error_Message__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>true</editable><field>Job_Requisition__c.Minimum_Salary__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>true</editable><field>Job_Requisition__c.Maximum_Salary__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>true</editable><field>Job_Requisition__c.Approval_Comments__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>true</editable><field>Offer__c.Offered_Salary__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>true</editable><field>Offer__c.Approval_Comments__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Offer__c.Approved_By__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>true</editable><field>Offer__c.Is_Approval_Required__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>interview__c.Consolidated_Score__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>interview__c.Consolidated_Recommendation__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Interview_Evaluation__c.Technical_Score__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Interview_Evaluation__c.Problem_Solving_Score__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Interview_Evaluation__c.Experience_Score__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Interview_Evaluation__c.Communication_Score__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Interview_Evaluation__c.Role_Suitability_Score__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Interview_Evaluation__c.Overall_Score__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Interview_Evaluation__c.Recommendation__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Interview_Evaluation__c.Comments__c</field><readable>true</readable></fieldPermissions>
     <hasActivationRequired>false</hasActivationRequired>
     <label>RTP Recruiter Access</label>
+    <objectPermissions><allowCreate>false</allowCreate><allowDelete>false</allowDelete><allowEdit>true</allowEdit><allowRead>true</allowRead><modifyAllRecords>false</modifyAllRecords><object>Candidate__c</object><viewAllRecords>false</viewAllRecords></objectPermissions>
+    <objectPermissions><allowCreate>true</allowCreate><allowDelete>false</allowDelete><allowEdit>true</allowEdit><allowRead>true</allowRead><modifyAllRecords>false</modifyAllRecords><object>Resume_Parsing_Request__c</object><viewAllRecords>false</viewAllRecords></objectPermissions>
+    <objectPermissions><allowCreate>true</allowCreate><allowDelete>false</allowDelete><allowEdit>true</allowEdit><allowRead>true</allowRead><modifyAllRecords>false</modifyAllRecords><object>Job_Requisition__c</object><viewAllRecords>false</viewAllRecords></objectPermissions>
+    <objectPermissions><allowCreate>true</allowCreate><allowDelete>false</allowDelete><allowEdit>true</allowEdit><allowRead>true</allowRead><modifyAllRecords>false</modifyAllRecords><object>Offer__c</object><viewAllRecords>false</viewAllRecords></objectPermissions>
+    <objectPermissions><allowCreate>true</allowCreate><allowDelete>false</allowDelete><allowEdit>true</allowEdit><allowRead>true</allowRead><modifyAllRecords>false</modifyAllRecords><object>interview__c</object><viewAllRecords>false</viewAllRecords></objectPermissions>
+    <objectPermissions><allowCreate>false</allowCreate><allowDelete>false</allowDelete><allowEdit>false</allowEdit><allowRead>true</allowRead><modifyAllRecords>false</modifyAllRecords><object>Interview_Evaluation__c</object><viewAllRecords>false</viewAllRecords></objectPermissions>
 </PermissionSet>

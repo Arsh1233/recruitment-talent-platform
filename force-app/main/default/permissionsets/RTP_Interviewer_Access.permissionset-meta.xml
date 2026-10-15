@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <classAccesses>
+        <apexClass>RTPInterviewEvaluationService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>RTP_Submit_Interview_Evaluation</name>
+    </customPermissions>
     <description>Access foundation for assigned interviews and the interviewer's own evaluations.</description>
+    <fieldPermissions><editable>false</editable><field>Candidate__c.Current_Job_Title__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Candidate__c.Current_Location__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Candidate__c.First_Name__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Candidate__c.Last_Name__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Candidate__c.Total_Experience__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Job_Application__c.Status__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Job_Application__c.Submitted_At__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>interview__c.Interview_Mode__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>interview__c.Interview_Type__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>interview__c.Location_or_Meeting_Link__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>interview__c.Primary_Interviewer__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>interview__c.Scheduled_End__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>interview__c.Scheduled_Start__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>interview__c.Status__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>interview__c.Time_Zone__c</field><readable>true</readable></fieldPermissions>
     <hasActivationRequired>false</hasActivationRequired>
     <label>RTP Interviewer Access</label>
+    <objectPermissions><allowCreate>false</allowCreate><allowDelete>false</allowDelete><allowEdit>false</allowEdit><allowRead>true</allowRead><modifyAllRecords>false</modifyAllRecords><object>Candidate__c</object><viewAllRecords>false</viewAllRecords></objectPermissions>
+    <objectPermissions><allowCreate>false</allowCreate><allowDelete>false</allowDelete><allowEdit>false</allowEdit><allowRead>true</allowRead><modifyAllRecords>false</modifyAllRecords><object>Job_Application__c</object><viewAllRecords>false</viewAllRecords></objectPermissions>
+    <objectPermissions><allowCreate>false</allowCreate><allowDelete>false</allowDelete><allowEdit>false</allowEdit><allowRead>true</allowRead><modifyAllRecords>false</modifyAllRecords><object>interview__c</object><viewAllRecords>false</viewAllRecords></objectPermissions>
 </PermissionSet>

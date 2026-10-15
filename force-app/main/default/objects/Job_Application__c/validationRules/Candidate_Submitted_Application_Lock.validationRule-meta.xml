@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Candidate_Submitted_Application_Lock</fullName>
+    <active>true</active>
+    <description>Candidate portal users cannot directly edit an application after it leaves Draft. A controlled withdrawal transition remains permitted.</description>
+    <errorConditionFormula>AND(
+    $Permission.RTP_Candidate_Portal_User,
+    NOT(ISNEW()),
+    NOT(ISPICKVAL(PRIORVALUE(Status__c), "Draft")),
+    NOT(
+        AND(
+            ISCHANGED(Status__c),
+            ISPICKVAL(Status__c, "Withdrawn"),
+            NOT(ISBLANK(Withdrawal_Date__c)),
+            NOT(ISBLANK(Withdrawal_Reason__c))
+        )
+    )
+)</errorConditionFormula>
+    <errorMessage>Submitted applications are locked. Use the controlled withdrawal action if you need to withdraw.</errorMessage>
+</ValidationRule>

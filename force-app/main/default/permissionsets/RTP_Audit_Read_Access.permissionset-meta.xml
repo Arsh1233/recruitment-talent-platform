@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
     <description>Read-only foundation for authorized audit and integration-monitoring information. No credential or sensitive payload access.</description>
+    <fieldPermissions><editable>false</editable><field>Integration_Log__c.Related_Record_ID__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Integration_Log__c.Correlation_ID__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Integration_Log__c.Status__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Integration_Log__c.HTTP_Status__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Integration_Log__c.Started_At__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Integration_Log__c.Completed_At__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Integration_Log__c.Duration_Milliseconds__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Integration_Log__c.Retry_Count__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Integration_Log__c.Error_Category__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Integration_Log__c.Safe_Error_Message__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>AI_Interaction__c.Interaction_Type__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>AI_Interaction__c.Provider__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>AI_Interaction__c.Model__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>AI_Interaction__c.Status__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>AI_Interaction__c.Requested_At__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>AI_Interaction__c.Completed_At__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>AI_Interaction__c.Input_Classification__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>AI_Interaction__c.Output_Classification__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>AI_Interaction__c.Correlation_ID__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>AI_Interaction__c.Safe_Summary__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Resume_Parsing_Request__c.Status__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Resume_Parsing_Request__c.Provider__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Resume_Parsing_Request__c.Provider_Model__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Resume_Parsing_Request__c.Requested_At__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Resume_Parsing_Request__c.Completed_At__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Resume_Parsing_Request__c.Correlation_ID__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Resume_Parsing_Request__c.Error_Category__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Resume_Parsing_Request__c.Safe_Error_Message__c</field><readable>true</readable></fieldPermissions>
     <hasActivationRequired>false</hasActivationRequired>
     <label>RTP Audit Read Access</label>
+    <objectPermissions><allowCreate>false</allowCreate><allowDelete>false</allowDelete><allowEdit>false</allowEdit><allowRead>true</allowRead><modifyAllRecords>false</modifyAllRecords><object>Integration_Log__c</object><viewAllRecords>false</viewAllRecords></objectPermissions>
+    <objectPermissions><allowCreate>false</allowCreate><allowDelete>false</allowDelete><allowEdit>false</allowEdit><allowRead>true</allowRead><modifyAllRecords>false</modifyAllRecords><object>AI_Interaction__c</object><viewAllRecords>false</viewAllRecords></objectPermissions>
+    <objectPermissions><allowCreate>false</allowCreate><allowDelete>false</allowDelete><allowEdit>false</allowEdit><allowRead>true</allowRead><modifyAllRecords>false</modifyAllRecords><object>Resume_Parsing_Request__c</object><viewAllRecords>false</viewAllRecords></objectPermissions>
 </PermissionSet>

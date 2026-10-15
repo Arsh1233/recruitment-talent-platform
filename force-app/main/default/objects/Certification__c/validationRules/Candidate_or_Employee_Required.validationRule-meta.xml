@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Candidate_or_Employee_Required</fullName>
+    <active>true</active>
+    <description>A certification must belong to a candidate, an employee, or both.</description>
+    <errorConditionFormula>AND(ISBLANK(Candidate__c), ISBLANK(Employee__c))</errorConditionFormula>
+    <errorMessage>Select a candidate or an employee for this certification.</errorMessage>
+</ValidationRule>

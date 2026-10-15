@@ -1,6 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
     <description>Highly restricted foundation for critical positions, succession nominations, committee comments, and readiness assessments.</description>
+    <fieldPermissions><editable>true</editable><field>Critical_Position__c.Criticality__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>true</editable><field>Critical_Position__c.Vacancy_Risk__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>true</editable><field>Critical_Position__c.Business_Impact__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>true</editable><field>Critical_Position__c.Current_Employee__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>true</editable><field>Succession_Nomination__c.Recommended_Readiness__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>true</editable><field>Succession_Nomination__c.Approved_Readiness__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>true</editable><field>Succession_Nomination__c.Committee_Comments__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>true</editable><field>Succession_Nomination__c.Recommendation_Explanation__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>true</editable><field>Succession_Nomination__c.Restricted_Conflict_Notes__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>true</editable><field>Succession_Nomination__c.Is_Conflict_Disclosed__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>true</editable><field>Succession_Nomination__c.Is_Development_Required__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Succession_Nomination__c.Latest_Readiness__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Succession_Nomination__c.Latest_Assessment_Date__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>true</editable><field>Readiness_Assessment__c.Skills_Score__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>true</editable><field>Readiness_Assessment__c.Experience_Score__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>true</editable><field>Readiness_Assessment__c.Performance_Score__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>true</editable><field>Readiness_Assessment__c.Certification_Score__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>true</editable><field>Readiness_Assessment__c.Development_Progress_Score__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>true</editable><field>Readiness_Assessment__c.Manager_Assessment__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>true</editable><field>Readiness_Assessment__c.Recommended_Readiness__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>true</editable><field>Readiness_Assessment__c.Explanation__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Performance_Review__c.Manager_Rating__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Performance_Review__c.Final_Rating__c</field><readable>true</readable></fieldPermissions>
     <hasActivationRequired>false</hasActivationRequired>
     <label>RTP Succession Access</label>
+    <objectPermissions><allowCreate>true</allowCreate><allowDelete>false</allowDelete><allowEdit>true</allowEdit><allowRead>true</allowRead><modifyAllRecords>false</modifyAllRecords><object>Critical_Position__c</object><viewAllRecords>false</viewAllRecords></objectPermissions>
+    <objectPermissions><allowCreate>true</allowCreate><allowDelete>false</allowDelete><allowEdit>true</allowEdit><allowRead>true</allowRead><modifyAllRecords>false</modifyAllRecords><object>Succession_Nomination__c</object><viewAllRecords>false</viewAllRecords></objectPermissions>
+    <objectPermissions><allowCreate>true</allowCreate><allowDelete>false</allowDelete><allowEdit>true</allowEdit><allowRead>true</allowRead><modifyAllRecords>false</modifyAllRecords><object>Readiness_Assessment__c</object><viewAllRecords>false</viewAllRecords></objectPermissions>
+    <objectPermissions><allowCreate>false</allowCreate><allowDelete>false</allowDelete><allowEdit>false</allowEdit><allowRead>true</allowRead><modifyAllRecords>false</modifyAllRecords><object>Performance_Review__c</object><viewAllRecords>false</viewAllRecords></objectPermissions>
 </PermissionSet>
